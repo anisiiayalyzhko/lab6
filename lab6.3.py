@@ -1,8 +1,12 @@
-def count_vowels():
+def count():
     A = input("Enter a text: ")
 
-    vowel_count = sum(1 for char in A if char in 'aeiouyAEIOUY')
+    vowels_set = set('aeiouyAEIOUY')
 
-    print("Number of vowels:", vowel_count)
+    vowels_text = set(A) & vowels_set
 
-count_vowels()
+    print("Number of vowels:", len(vowels_text))
+
+    return
+
+count()
